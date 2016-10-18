@@ -16,34 +16,32 @@ jQuery(function() {
         console.log(id);
         var songString = `http://api.soundcloud.com/tracks/${id}/stream?client_id=03e4633e2d85874a921380e47cac705d`;
         $("audio").attr("src", songString);
-        $("#nowPlaying").text(id);
+        $("#nowPlaying").text("Now Playing: " + id);
+        $("audio").trigger("play");
+
     })
     $("body").on("click", ".songArtwork", function() {
         var id = $(this).data("id");
         console.log(id);
         var songString = `http://api.soundcloud.com/tracks/${id}/stream?client_id=03e4633e2d85874a921380e47cac705d`;
         $("audio").attr("src", songString);
-        $("#nowPlaying").text(id);
+        $("#nowPlaying").text("Now Playing: " + id);
+        $("audio").trigger("play");
 
     })
 
-
     function getSong(query) {
-
         $("#putStuffHere").html("");
         $.ajax({
             url: `https://api.soundcloud.com/tracks/?q=${query}&client_id=03e4633e2d85874a921380e47cac705d`,
             method: 'GET',
             success: function successHandler(songData) {
                 console.log(songData);
-
                 songData.forEach(function(songData) {
-
                     var streamID = songData.id;
                     console.log(streamID);
                     if (songData.artwork_url === null) {
                         songData.artwork_url = "http://www.bensound.com/bensound-img/happyrock.jpg";
-
                     }
 
                     $("#putStuffHere").append(`
