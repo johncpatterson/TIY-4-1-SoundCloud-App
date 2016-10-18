@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Your title goes here</title>
+    <title>Songster</title>
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Gentium+Basic|Wendy+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,17 +13,31 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="">
-                <form action="#" id="submitForm">
-                    <input type="text" id="searchBox" class="form-control" placeholder="Enter stuff here..." />
-                </form>
-                <button class="btn btn-primary btn-lg" id="button">Button</button>
-                <audio controls>
-                    <source src="horse.ogg" type="audio/ogg">
-                    <source src="horse.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+            <h1 class="appName">Welome to Songster</h1>
+        </div>
+        <div class="row">
+            <div class="audioControls col-md-offset-4">
+                <audio controls src='' id="audioSource">
                 </audio>
-                <div id="putWStuffHere" class="">
-                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="nowPlaying">
+                Now Playing:
+            </div>
+        </div>
+        <div class="searchArea row">
+            <div class="col-md-11">
+                <form action="#" id="submitForm">
+                    <input type="text" id="searchBox" class="form-control" placeholder="Search songs here..." />
+                </form>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary btn-warning searchButton" id="button">Search</button>
+            </div>
+        </div>
+        <div class="row putStuffHere">
+            <div id="putStuffHere">
             </div>
         </div>
     </div>

@@ -1,10 +1,87 @@
 body {
-    background-color: #a05608;
-    color: white;
     font-family: 'Bree Serif', serif;
-    font-size: 25px;
+    font-size: 15px;
+    color: black;
+    background-color: #c7c8d6;
+}
+
+.appName {
+    color: black;
+}
+
+#nowPlaying {
+    margin-top: -15px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+#audioSource {
+    max-width: 100%;
+}
+
+.row {
+    padding: 10px;
+}
+
+.searchArea {
+    padding: 29px 15px 10px 15px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.song_title {
+    padding: 5px;
+    padding-left: 18px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
+img.songArtwork {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+}
 
+img.waveform {
+    margin: 5px;
+    background-color: #F0AD4E;
+    border-radius: 3px;
+    margin-top: 15px;
+}
 
+input {
+    padding-top: 15px;
+    font-size: 25px;
+}
+
+button {
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+button.searchButton {
+    margin: 0px;
+    font-size: 18px;
+}
+
+audio {
+    width: 45%;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
